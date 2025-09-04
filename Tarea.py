@@ -1,13 +1,18 @@
-pro={"Manzana":"5", "Pollo":"10", "Leche":"2"}
-lis=[]
+lis={}
 precio=0
 seguir="si"
+print("Debe escribir continuar o comprar para usar el sistema")
 while seguir == "si":
-    sel=input("Que producto quiere:")
-    if sel in range pro:
-        lis.append(key)
-    elif sel=Comprar:
-        print lis
-        print precio
+    con=input("Continuar o comprar:")
+    if con=="continuar":
+        prod=input("Producto a comprar:")
+        pre=int(input("Precio del producto:"))
+        lis[prod] = pre
+        print(lis)
+        precio+=lis.get(prod)
+    elif con=="comprar":
+        seguir=1
+        print("Lista:", lis.keys())
+        print("Precio total:$"+str(precio))
     else:
-        print "error"
+        print("error")
